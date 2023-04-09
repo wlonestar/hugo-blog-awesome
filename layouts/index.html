@@ -7,6 +7,8 @@
         <div class="wrapper">
             {{ partial "bio" . }}
             <main aria-label="Content">
+              {{ .Content }}
+              <!--
                 <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
                 {{/* Show last 5 posts in reverse date order */}}
                 {{ $posts := .Site.RegularPages.ByDate.Reverse }}
@@ -18,6 +20,7 @@
                     <a href="/posts/">See all posts</a>
                 </p>
                 {{ end }}
+              -->
             </main>
         </div>
         {{- partial "footer.html" . -}}
