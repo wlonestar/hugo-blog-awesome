@@ -1,7 +1,6 @@
 <footer class="footer">
     <span class="footer_item"> </span>
     &nbsp;
-
     <div class="footer_social-icons">
         {{- partial "socialIcons.html" site.Params.socialIcons -}}
     </div>
@@ -11,6 +10,12 @@
         theme on
         <a href="https://gohugo.io" target="_blank" rel="noreferrer noopener">Hugo</a>.
     </small>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="footer_copyright">
+        <span id="busuanzi_container_site_uv">
+            本站访客数&nbsp;<span id="busuanzi_value_site_uv"></span>&nbsp;人次
+        </span>
+    </div>
 </footer>
 
 {{- if .Site.Params.goToTop -}}
