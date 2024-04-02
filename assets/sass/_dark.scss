@@ -112,8 +112,8 @@
 
   // Link
   a {
-    color: inherit;
-    text-decoration-color: $dark-smoke;
+    color: rgb(203, 155, 245);
+    text-decoration-color: rgba(0,0,0,0);
 
     &:hover {
       color: $dark-text-link-blue;
