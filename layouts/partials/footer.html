@@ -9,6 +9,20 @@
         © {{ now.Format "2006" }} {{ .Site.Params.author.name }}.
         {{ T "footer.disclaimer" | safeHTML }}
     </small>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="footer_copyright">
+        <span id="busuanzi_container_site_uv">
+            本站访客数&nbsp;<span id="busuanzi_value_site_uv"></span>&nbsp;人次
+        </span>
+        <a href='https://clustrmaps.com/site/1bz3u' title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=ffffff&w=100&t=n&d=aTICa2tBsqThPDO_ZiseRdTobib-tB0IbtoSqVHKG2E'/></a>
+    </div>
+    <!-- Load PhotoSwipe js if the load-photoswipe shortcode has been used -->
+    {{ if ($.Scratch.Get "photoswipeloaded") }}
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/js/load-photoswipe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+    {{ end }}
 </footer>
 
 {{- if .Site.Params.goToTop -}}

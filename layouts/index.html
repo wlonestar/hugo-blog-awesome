@@ -19,10 +19,10 @@
         {{ partial "bio" . }}
         <main aria-label="Content">
             <h3 class="posts-item-note" aria-label="Recent Posts">{{ T "home.recent_posts" }}</h3>
-            {{/* Show last 5 posts in reverse date order */}}
+            {{/* Show last 7 posts in reverse date order */}}
             {{ $pagesToShow := where .Site.RegularPages "Type" "in" site.Params.mainSections }}
             {{ $posts := $pagesToShow.ByDate.Reverse }}
-            {{ range first 5 $posts }}
+            {{ range first 7 $posts }}
             {{ partial "postCard" . }}
             {{ end }}
             {{ if gt (len $posts) 5 }}
