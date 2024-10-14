@@ -9,22 +9,13 @@
                     {{ with .Date }} {{ $ISO_time := dateFormat
                     "2006-01-02T15:04:05-07:00" . }}
                     <time datetime="{{ $ISO_time }}" itemprop="datePublished">
-                        {{ . | time.Format "2006-01-02 15:04" }}
+                        {{ . | time.Format "2006/01/02" }}
                     </time>
                     {{ end }}
-                    <span id="busuanzi_container_page_pv">
-                        本文总阅读量&nbsp;<span
-                            id="busuanzi_value_page_pv"
-                        ></span
-                        >&nbsp;次
-                    </span>
                     {{ if .Site.Params.page_view_counter }}
-                    <span class="post-date"
-                        >共&nbsp;{{ .WordCount }}&nbsp;字</span
-                    >
-                    阅读约<span class="more-meta">
-                        {{ .ReadingTime }}&nbsp;分钟</span
-                    >
+                    <span class="more-meta">
+                      · {{ .ReadingTime }}分钟
+                    </span>
                     {{ end }}
                 </div>
                 {{- end -}}
