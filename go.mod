@@ -1,3 +1,3 @@
-module github.com/hugo-sid/hugo-blog-awesome
+module github.com/wlonestar/hugo-blog-awesome
 
 go 1.22.0
